@@ -12,7 +12,7 @@ Este é o meu primeiro projeto em Flutter, uma ferramenta poderosa para criar ap
 - Estruturas básicas do Flutter
 - Gerenciamento de estado
 - Design de interfaces
-- 
+
 *Como Executar o Projeto*
 - Clone este repositório.
 - Certifique-se de ter o Flutter instalado em sua máquina.

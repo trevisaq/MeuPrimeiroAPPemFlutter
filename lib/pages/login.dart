@@ -17,7 +17,8 @@ class _LoginState extends State<Login> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 10, 178, 184),
       appBar: AppBar(
-        backgroundColor:const Color.fromARGB(255, 10, 178, 184),),
+        backgroundColor: const Color.fromARGB(255, 10, 178, 184),
+      ),
       body: Container(
         padding: const EdgeInsets.all(20),
         margin: const EdgeInsets.all(8),
@@ -78,13 +79,15 @@ class _LoginState extends State<Login> {
                 decoration: InputDecoration(
                   icon: const Icon(Icons.lock),
                   iconColor: const Color.fromARGB(255, 10, 178, 184),
-                  suffixIcon: GestureDetector(child: Icon(
-                    _showPassword == false ? Icons.visibility_off : Icons.visibility),
-                  onTap:() {
-                    setState(() {
-                      _showPassword = !_showPassword;
-                    });
-                  },
+                  suffixIcon: GestureDetector(
+                    child: Icon(_showPassword == false
+                        ? Icons.visibility_off
+                        : Icons.visibility),
+                    onTap: () {
+                      setState(() {
+                        _showPassword = !_showPassword;
+                      });
+                    },
                   ),
                   hintText: "Informe sua senha",
                 ),
@@ -95,12 +98,6 @@ class _LoginState extends State<Login> {
                   if (senha.length < 4) {
                     return "A sua senha é muito curta";
                   }
-                  // if (!senha.contains(RegExp(r'[A-Z]'))) {
-                  //   return "A senha deve conter um caractere maiúsculo";
-                  // }
-                  // if (!senha.contains(RegExp(r'[0-9]'))) {
-                  //   return "A senha deve conter pelo menos um numero";
-                  // }
                   return null;
                 },
               ),
@@ -111,8 +108,8 @@ class _LoginState extends State<Login> {
                 },
                 child: const Text("Entrar"),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor:const Color.fromARGB(255, 10, 178, 184),
-                  foregroundColor:Colors.white,
+                  backgroundColor: const Color.fromARGB(255, 10, 178, 184),
+                  foregroundColor: Colors.white,
                   fixedSize: const Size(350, 30),
                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.zero,
@@ -127,28 +124,21 @@ class _LoginState extends State<Login> {
                 style: TextStyle(color: Color.fromARGB(199, 131, 131, 131)),
               ),
               const SizedBox(height: 40),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Cadastro2()),
-                  );
-                },
-                child: const Text(
-                  "Me cadastrar",
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 10, 178, 184),
-                    fontSize: 18,
-                  ),
-                ),
-              ),
+              GestureDetector(child: const Text("Me cadastrar",
+              style: TextStyle(
+                color: Color.fromARGB(255, 10, 178, 184),
+                fontSize: 18,
+              ),),
+              onTap:() => {
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => const Cadastro() )),
+              }),
             ],
           ),
         ),
       ),
     );
   }
-
   buttonEnterClick() {
     if (_formKey.currentState!.validate()) {
       print("Form ok");

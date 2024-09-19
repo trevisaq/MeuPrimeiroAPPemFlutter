@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Cadastro2 extends StatefulWidget {
-  const Cadastro2({super.key});
+class Cadastro extends StatefulWidget {
+  const Cadastro({super.key});
 
   @override
-  State<Cadastro2> createState() => _Cadastro2State();
+  State<Cadastro> createState() => CadastroState();
 }
 
-class _Cadastro2State extends State<Cadastro2> {
+class CadastroState extends State<Cadastro> {
   final _formKey = GlobalKey<FormState>();
   String? _senha; // Variável para armazenar a senha
 
