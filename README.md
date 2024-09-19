@@ -1,16 +1,28 @@
-# trevisan_streaming
 
-A new Flutter project.
+Olá! 👋
+Bem-vindo ao meu repositório! Sou aluno do segundo ano do SENAI Pompéia, em São Paulo, e estou mergulhando no mundo da programação e desenvolvimento de aplicativos.
 
-## Getting Started
+Sobre o Projeto
+Este é o meu primeiro projeto em Flutter, uma ferramenta poderosa para criar aplicações móveis. Estou animado para aprender e explorar as possibilidades que o Flutter oferece. O objetivo deste projeto é [descrever brevemente o que o aplicativo faz ou qual problema ele resolve].
 
-This project is a starting point for a Flutter application.
+Tecnologias Utilizadas
+Flutter: Para o desenvolvimento do aplicativo.
+Dart: Linguagem de programação utilizada no Flutter.
+Aprendizados
+Durante o desenvolvimento deste projeto, estou aprendendo sobre:
 
-A few resources to get you started if this is your first Flutter project:
+Estruturas básicas do Flutter
+Gerenciamento de estado
+Design de interfaces
+Como Executar o Projeto
+Clone este repositório.
+Certifique-se de ter o Flutter instalado em sua máquina.
+Navegue até o diretório do projeto.
+Execute o comando flutter run para iniciar o aplicativo.
+Contribuições
+Se você tiver sugestões ou quiser contribuir de alguma forma, fique à vontade para abrir uma issue ou enviar um pull request!
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Contato
+Sinta-se à vontade para me encontrar nas redes sociais ou no SENAI para trocar ideias sobre programação e Flutter.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Agradeço por visitar meu projeto! Espero que você goste e acompanhe minha jornada no desenvolvimento de aplicativos! 🚀
