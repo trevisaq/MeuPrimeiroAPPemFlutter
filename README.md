@@ -8,7 +8,7 @@ Este é o meu primeiro projeto em Flutter, uma ferramenta poderosa para criar ap
 - Flutter: Para o desenvolvimento do aplicativo.
 - Dart: Linguagem de programação utilizada no Flutter.
   
-*Aprendizados
+*Aprendizados*
 - Estruturas básicas do Flutter
 - Gerenciamento de estado
 - Design de interfaces
