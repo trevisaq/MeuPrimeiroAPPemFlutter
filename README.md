@@ -22,7 +22,3 @@ Este é o meu primeiro projeto em Flutter, uma ferramenta poderosa para criar ap
 ---
 
 Agradeço por visitar meu projeto! Espero que você goste e acompanhe minha jornada no desenvolvimento de aplicativos! 🚀
-
-
-
-japones ama penis
