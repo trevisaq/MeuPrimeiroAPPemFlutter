@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trevisan_streaming/pages/login.dart';
+import 'package:trevisan_streaming/pages/cadastro.dart';
+import 'package:trevisan_streaming/shared/style.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +13,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: 
-      ColorScheme.fromSeed(seedColor: Color.fromARGB(0, 0, 0, 0)),
-      useMaterial3:true),
-      home: Login(),
       debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.system,
+      theme: ThemeData(
+        fontFamily: MyFonts.fontPrimary,
+        colorScheme: ColorScheme.fromSeed(seedColor: MyColors.azulClaro),
+        useMaterial3: true,
+      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Login(),
+        '/cadastro': (context) => const Cadastro(),
+        // '/home' : (context) => const Home(),
+      },
     );
   }
 }
-

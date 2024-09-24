@@ -11,8 +11,6 @@ class CadastroState extends State<Cadastro> {
   final _formKey = GlobalKey<FormState>();
   String? _senha; // Variável para armazenar a senha
 
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,18 +51,17 @@ class CadastroState extends State<Cadastro> {
               ),
               const SizedBox(height: 20),
               TextFormField(
-                autofocus: true,
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.person),
-                  hintText: "Nome completo",
-                  iconColor: Color.fromARGB(255, 10, 178, 184),
-                ),
-                validator: (String? nome) {
-                  if (nome == null || nome.isEmpty) {
-                    return "O campo nome não pode ser vazio";
-                  }
-                }
-              ), // Campo de entrada
+                  autofocus: true,
+                  decoration: const InputDecoration(
+                    icon: Icon(Icons.person),
+                    hintText: "Nome completo",
+                    iconColor: Color.fromARGB(255, 10, 178, 184),
+                  ),
+                  validator: (String? nome) {
+                    if (nome == null || nome.isEmpty) {
+                      return "O campo nome não pode ser vazio";
+                    }
+                  }), // Campo de entrada
               TextFormField(
                 decoration: const InputDecoration(
                   icon: Icon(Icons.numbers),
@@ -75,10 +72,11 @@ class CadastroState extends State<Cadastro> {
                   if (cpf == null || cpf.isEmpty) {
                     return "O campo cpf não pode ser vazio";
                   }
-                   if (cpf.contains(RegExp(r'[A-Z]')) || cpf.contains(RegExp(r'[a-z]'))) {
+                  if (cpf.contains(RegExp(r'[A-Z]')) ||
+                      cpf.contains(RegExp(r'[a-z]'))) {
                     return "O CPF não pode conter letras";
                   }
-                  if (cpf.length < 11) {
+                  if (cpf.length != 11) {
                     return "CPF inválido ou mal digitado";
                   }
                   return null;
@@ -132,21 +130,20 @@ class CadastroState extends State<Cadastro> {
                 },
               ),
               TextFormField(
-                obscureText: true,
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.content_paste),
-                  hintText: "Confirme sua senha",
-                  iconColor: Color.fromARGB(255, 10, 178, 184),
-                ),
-                validator: (String? Csenha) {
-                  if (Csenha == null || Csenha.isEmpty) {
-                    return "O campo senha não pode ser vazio";
-                  }
+                  obscureText: true,
+                  decoration: const InputDecoration(
+                    icon: Icon(Icons.content_paste),
+                    hintText: "Confirme sua senha",
+                    iconColor: Color.fromARGB(255, 10, 178, 184),
+                  ),
+                  validator: (String? Csenha) {
+                    if (Csenha == null || Csenha.isEmpty) {
+                      return "O campo senha não pode ser vazio";
+                    }
                     if (Csenha != _senha) {
-                    return "As senhas não coincidem";
-                  }
-                }
-              ), // Campo de entrada
+                      return "As senhas não coincidem";
+                    }
+                  }), // Campo de entrada
               TextFormField(
                 decoration: const InputDecoration(
                   icon: Icon(Icons.phone),
@@ -157,7 +154,7 @@ class CadastroState extends State<Cadastro> {
                   if (fone == null || fone.isEmpty) {
                     return "O campo telefone não pode ser vazio";
                   }
-                  if (fone.length < 14) {
+                  if (fone.length < 11) {
                     return "Telefone inválido";
                   }
                   return null;
@@ -188,6 +185,7 @@ class CadastroState extends State<Cadastro> {
       ),
     );
   }
+
   buttonEnterClick() {
     if (_formKey.currentState!.validate()) {
       print("Form ok");

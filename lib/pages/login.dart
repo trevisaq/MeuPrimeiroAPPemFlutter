@@ -124,21 +124,22 @@ class _LoginState extends State<Login> {
                 style: TextStyle(color: Color.fromARGB(199, 131, 131, 131)),
               ),
               const SizedBox(height: 40),
-              GestureDetector(child: const Text("Me cadastrar",
-              style: TextStyle(
-                color: Color.fromARGB(255, 10, 178, 184),
-                fontSize: 18,
-              ),),
-              onTap:() => {
-                Navigator.push(context, 
-                MaterialPageRoute(builder: (context) => const Cadastro() )),
-              }),
+              GestureDetector(
+                  child: const Text(
+                    "Me cadastrar",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 10, 178, 184),
+                      fontSize: 18,
+                    ),
+                  ),
+                  onTap: () => {Navigator.pushNamed(context, '/cadastro')}),
             ],
           ),
         ),
       ),
     );
   }
+
   buttonEnterClick() {
     if (_formKey.currentState!.validate()) {
       print("Form ok");
